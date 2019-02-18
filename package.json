@@ -1,0 +1,22 @@
+{
+  "name": "akachi-portfolio",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "akachi",
+  "license": "ISC",
+  "devDependencies": {
+    "auto-prefixer": "^0.4.2",
+    "autoprefixer": "^9.4.3",
+    "connect-modrewrite": "^0.10.2",
+    "gulp": "^4.0.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "postcss-scss": "^2.0.0"
+  }
+}
