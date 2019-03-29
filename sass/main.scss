@@ -66,8 +66,7 @@ html {
 
 .navbar__list-item a:hover {
     padding-bottom: 5px;
-    border-bottom: 4px solid $black;
-    color: $yellow;
+    border-bottom: 4px solid $yellow;
 }
 
 .menu-active {
@@ -80,44 +79,48 @@ html {
 }
 
 .header-container {
-    margin-top: 12rem;
+    // margin-top: 12rem;
+    // display: flex;
+    // justify-content: center;
+
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .home-bg {
-    background: url(../img/background-path.svg) no-repeat;
+    // background: url(../img/background-path.svg) no-repeat;
+    // align-self: center;
+    // background-size: contain;
+    // background-position: center;
+    // height: 66rem;
+    // width: 110rem
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    background-color: #fdca40;
+    // clip-path: polygon(90% 9%, 66% 79%, 23% 61%, 12% 16%);
+    clip-path: polygon(92% 8%, 69% 82%, 27% 67%, 10% 14%);
+    min-height: 90rem;
+    position: relative;
     align-self: center;
-    background-size: contain;
-    background-position: center;
-    height: 66rem;
-    width: 110rem
-}
-
-.brain-bg {
-    background: url(../img/brain-path.svg) no-repeat;
-    align-self: center;
-    background-size: contain;
-    background-position: center;
-    height: 68rem;
-    width: 71rem
+    width: 100%;
+    height: 80rem;
 }
 
 .process-bg {
-    background: url(../img/new-bg-path.svg) no-repeat;
-    align-self: center;
-    background-size: contain;
-    background-position: center;
-    height: 54rem;
-    width: 94rem
+    @extend .home-bg;
+    clip-path: polygon(82% 12%, 77% 56%, 24% 56%, 17% 11%);
 }
 
 .header {
-    width: 56rem;
+    max-width: 56rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 12rem;
+    position: absolute;
+    top: 70px;
 }
 
 .header-title-text {
@@ -148,16 +151,19 @@ html {
     font-weight: bold;
     font-size: 2rem;
     border-radius: 4px;
-    margin-top: 3rem;
+    margin-top: 2rem;
     border: 0;
     cursor: pointer;
+    transition: 0.25s ease-out all;
 }
 
 .header-btn:hover {
+    transform: scale(1.1);
+}
+
+.header-btn-wrapper {
     width: 22rem;
     height: 6rem;
-    font-size: 2.8rem;
-    transition: width, height, font-size 300ms ease-in-out;
 }
 
 .contact-item-con {
@@ -227,7 +233,7 @@ html {
 }
 
 .work-item-frame:hover {
-    animation: heartBeat 2s;
+    animation: pulse 1s;
 }
 
 .work-item-overlay {
@@ -309,7 +315,7 @@ html {
     width: 100%;
     padding: 0 12rem;
     justify-content: space-between;
-    height: 45rem;
+    height: 48rem;
     align-items: center;
 }
 
@@ -387,19 +393,18 @@ html {
 }
 
 .next-project {
-    height: 15rem;
+    height: 20rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 }
 
 .next-project-item {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Greycliff CF';
     font-weight: bold;
     color: $black;
     cursor: pointer;
-    padding: 0 2rem;
 }
 
 .next-project-item:hover {
@@ -436,7 +441,7 @@ html {
     }
 }
 
-.redesigned-ui{
+.redesigned-ui {
     width: 100%;
     height: 50rem;
     display: flex;
@@ -453,7 +458,54 @@ html {
     margin-bottom: 6rem
 }
 
+.work-contact-main-con {
+    position: absolute;
+    top: 300px;
+    align-self: center;
+}
+
+@media screen and  (max-width: 1024px){
+    .navbar, 
+    .work-type-box, 
+    .project-title-box ,
+    .project-section, 
+    .brand-work-section {
+        padding: 0 4rem;
+    }
+
+    .project-desc-box {
+        max-width: 45rem;
+    }
+
+    .logo-process {
+        img {
+            width: 40rem;
+        }
+    }
+
+    .header {
+        max-width: 45rem;
+    }
+
+    .home-bg {
+        clip-path: polygon(96% 10%, 74% 79%, 21% 74%, 5% 13%);
+    }
+
+    .process-bg {
+        clip-path: polygon(91% 12%, 77% 58%, 23% 58%, 9% 11%);
+    }
+
+    .work-item-wrap,
+    .contact-item-wrap {
+        justify-content: space-around;
+    }
+}
+
 @media screen and (max-width: 768px) {
+
+    .navbar-container {
+        height: 8rem;
+    }
 
     .navbar{
         padding: 2rem;
@@ -485,7 +537,7 @@ html {
             top: 0;
             transition: all .3s ease-in-out;
             width: 24px;
-            border-radius: 10rem;
+            border-radius: 1rem;
         }
     }
 
@@ -508,7 +560,7 @@ html {
         animation: fade-in 1s;
         background: $white;
         left: 0px;
-        top: 100px;
+        top: 80px;
         right: 0px;
         padding: 0 20px;
         position: absolute;
@@ -525,35 +577,38 @@ html {
         padding: 2rem;
         width: 100%;
         height: -webkit-fill-available;
-        justify-content: center;
         margin-top: 0;
+        top: 20px;
+        align-items: baseline;
+        justify-content: start;
     }
 
     .header-title-text {
         font-size: 3.2rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .header-text {
         font-size: 1.4rem;
+        text-align: left;
     }
 
     .header-container {
-        margin-top: 10rem;
+        margin-top: 8rem;
+        justify-content: flex-start;
     }
 
     .home-bg, .process-bg {
-        background-size: cover;
-        height: auto;
-        width: -webkit-fill-available;
-        background-position: unset;
+        margin-top: 0;
+        // clip-path: none;
+        clip-path: polygon(100% -10%, 20% 100%, 0% 100%, 0% 0%);
     }
 
     .header-btn {
         width: 15rem;
         font-size: 1.8rem;
         height: 4rem;
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 
     .mobile-header {
@@ -616,6 +671,10 @@ html {
         font-size: 3.6rem;
     }
 
+    .project-desc-box {
+        max-width: 74rem;
+    }
+
     .work-type-box {
         padding: 0 2rem;
         height: 5rem;
@@ -628,7 +687,7 @@ html {
     .project-section {
         padding: 0 2rem;
         flex-direction: column;
-        height: 70rem;
+        height: 80rem;
         justify-content: space-around;
     }
 
@@ -643,6 +702,7 @@ html {
 
         img {
             width: 100%;
+            max-width: 45rem;
         }
     }
 
@@ -677,6 +737,10 @@ html {
     }
 
     .next-project-item {
-        font-size: 2.8rem;
+        font-size: 2rem;
+    }
+
+    .work-contact-main-con {
+        top: 220px;
     }
 }
