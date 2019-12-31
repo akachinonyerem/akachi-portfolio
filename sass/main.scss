@@ -315,7 +315,7 @@ html {
     width: 100%;
     padding: 0 12rem;
     justify-content: space-between;
-    height: 48rem;
+    height: 60rem;
     align-items: center;
 }
 
@@ -327,7 +327,13 @@ html {
 
 .project-desc-text {
     font-size: 1.6rem;
+
+    a {
+        text-decoration: underline;
+        color: $black;
+    }
 }
+
 
 .logo-process {
     display: flex;
@@ -687,7 +693,7 @@ html {
     .project-section {
         padding: 0 2rem;
         flex-direction: column;
-        height: 80rem;
+        height: 100rem;
         justify-content: space-around;
     }
 

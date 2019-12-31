@@ -42,7 +42,7 @@ homeTl
 
 TweenMax.from(".process-bg", 0.8, {opacity: 0, autoalpha: 0, ease:Power1.easeOut, delay: 1});
 
-TweenMax.from(".work-contact-main-con", 0.8, {opacity: 0, autoalpha: 0, ease:Power2.easeInOut, delay: 3.2});
+TweenMax.from(".work-contact-main-con", 1.0, {opacity: 0, autoalpha: 0, ease:Power2.easeIn, delay: 3.2});
 
 
 TweenMax.from(".project-title", 0.8, {x: -80, opacity: 0, autoalpha: 0, ease:Power3.easeOut, delay: 0.8});
